@@ -5,6 +5,8 @@ class string_14 {
         String str = "       welcome     ";
         System.out.println(str);
         System.out.println(str.trim());
+         System.out.println(str.stripLeading());
+          System.out.println(str.stripTrailing());
 
     }
 }
