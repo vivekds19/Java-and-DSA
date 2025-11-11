@@ -2,7 +2,7 @@
 class even_digits {
 
     public static void main(String[] args) {
-        int[] arr = {12, 345, 2, 6, 7896};
+        int[] arr = {12, 345, 2, 6, 7896,1222};
         System.out.println(evenDigits(arr));
     }
 
