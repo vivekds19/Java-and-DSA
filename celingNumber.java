@@ -1,4 +1,5 @@
 // ceiling number is the smallest number greater than or equal to target number
+
 class celingNumber {
 
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ class celingNumber {
                 return arr[mid];
             }
         }
-        return arr[start];
+        return arr[ start ];
     }
 
 }
