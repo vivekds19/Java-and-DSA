@@ -10,6 +10,6 @@ class print_number {
             return;
         }
         System.out.println(n);
-        number(n - 1);
+        number(n-1);
     }
 }
