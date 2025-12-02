@@ -1,17 +1,21 @@
-
 class Subsquence {
-
     public static void main(String[] args) {
-        sub("", "abc");
+        System.out.println(sub("abc"));
     }
 
-    static void sub(String p, String str) {
+    static String sub(String str) {
+        return helper("", str);
+    }
+    static String helper(String p, String str) {
         if (str.isEmpty()) {
-            System.out.println(p);
-            return;
+            return p + " ";
         }
+
         char ch = str.charAt(0);
-        sub(p + ch, str.substring(1));
-        sub(p, str.substring(1));
+
+        String include = helper(p + ch, str.substring(1));
+        String exclude = helper(p, str.substring(1));
+
+        return include + exclude;
     }
 }
