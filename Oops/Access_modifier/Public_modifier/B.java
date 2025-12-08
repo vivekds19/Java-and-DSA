@@ -1,5 +1,9 @@
+class A {
+     public void show() {
+        System.out.println("Hello from A");
+    }
 
-import p1.*;
+}
 
 public class B {
 
@@ -8,3 +12,5 @@ public class B {
         a.show();
     }
 }
+
+
