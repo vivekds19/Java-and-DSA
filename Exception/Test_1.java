@@ -9,7 +9,7 @@ class Test_1 {
             System.out.println("Index out of bound exception occured");
 
         } finally {
-            System.out.println("This will always execute.");
+            System.out.println("This will always execute. ");
         }
     }
 }
