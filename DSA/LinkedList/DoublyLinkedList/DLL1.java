@@ -42,6 +42,18 @@ class DLL {
         size++;
     }
 
+    public void insertLast(int value) {
+        Node newnode = new Node(value);
+        if (tail == null) {
+            insertFirst(value);
+            return;
+        }
+        tail.next = newnode;
+        newnode.prev = tail;
+        tail = newnode;
+        size++;
+    }
+
     public void display() {
         Node temp = head;
         while (temp != null) {
@@ -60,6 +72,8 @@ public class DLL1 {
         list.insertFirst(10);
         list.insertFirst(20);
         list.insertFirst(30);
+        list.display();
+        list.insertLast(40);
         list.display();
     }
 }
