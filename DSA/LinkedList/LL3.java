@@ -103,6 +103,20 @@ class LL {
         return value;
     }
 
+    public int deleteAtIndex(int index) {
+        if (index == 0) {
+            return deleteFirst();
+        }
+        if (index == size - 1) {
+            return deleteLast();
+        }
+        Node prev = get(index - 1);
+        int value = prev.next.value;
+        prev.next = prev.next.next;
+        size--;
+        return value;
+    }
+
     public void display() {
         Node temp = head;
         while (temp != null) {
@@ -126,7 +140,10 @@ public class LL3 {
         ll3.list.insertAt(15, 2);
         ll3.list.display();
         System.out.println(ll3.list.deleteFirst());
+        ll3.list.display();
         System.out.println(ll3.list.deleteLast());
+        ll3.list.display();
+        System.out.println(ll3.list.deleteAtIndex(1));
         ll3.list.display();
     }
 }
