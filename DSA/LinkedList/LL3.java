@@ -83,6 +83,26 @@ class LL {
         return value;
     }
 
+    public Node get(int index) {
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    public int deleteLast() {
+        if (size <= 1) {
+            return deleteFirst();
+        }
+        Node secondLast = get(size - 2);
+        int value = tail.value;
+        tail = secondLast;
+        tail.next = null;
+        size--;
+        return value;
+    }
+
     public void display() {
         Node temp = head;
         while (temp != null) {
@@ -106,6 +126,7 @@ public class LL3 {
         ll3.list.insertAt(15, 2);
         ll3.list.display();
         System.out.println(ll3.list.deleteFirst());
+        System.out.println(ll3.list.deleteLast());
         ll3.list.display();
     }
 }
