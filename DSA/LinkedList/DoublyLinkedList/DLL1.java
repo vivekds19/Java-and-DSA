@@ -54,6 +54,37 @@ class DLL {
         size++;
     }
 
+    public void insertatIndex(int value, int index) {
+        if (index < 0 || index > size) {
+            System.out.println("Invalid index");
+            return;
+        }
+
+        if (index == 0) {
+            insertFirst(value);
+            return;
+        }
+
+        if (index == size) {
+            insertLast(value);
+            return;
+        }
+
+        Node temp = head;
+        for (int i = 0; i < index - 1; i++) {
+            temp = temp.next;
+        }
+
+        Node newnode = new Node(value);
+        Node after = temp.next;
+        temp.next = newnode;
+        newnode.prev = temp;
+        newnode.next = after;
+        after.prev = newnode;
+
+        size++;
+    }
+
     public void display() {
         Node temp = head;
         while (temp != null) {
@@ -74,6 +105,8 @@ public class DLL1 {
         list.insertFirst(30);
         list.display();
         list.insertLast(40);
+        list.display();
+        list.insertatIndex(25, 2);
         list.display();
     }
 }
