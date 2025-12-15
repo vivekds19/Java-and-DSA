@@ -6,7 +6,7 @@ public class Main {
 
         list.add("A");
         list.add("B");
-        list.add("A"); // duplicates allowed
+        list.add("A");  // duplicates allowed
 
         System.out.println(list); 
     }
