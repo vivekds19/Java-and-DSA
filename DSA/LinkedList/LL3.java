@@ -71,6 +71,18 @@ class LL {
         size++;
     }
 
+    public int deleteFirst() {
+        int value = head.value;
+        head = head.next;
+        if (head == null) {
+            tail = null;
+
+        }
+
+        size--;
+        return value;
+    }
+
     public void display() {
         Node temp = head;
         while (temp != null) {
@@ -92,6 +104,8 @@ public class LL3 {
         ll3.list.insertLast(20);
         ll3.list.insertLast(30);
         ll3.list.insertAt(15, 2);
+        ll3.list.display();
+        System.out.println(ll3.list.deleteFirst());
         ll3.list.display();
     }
 }
