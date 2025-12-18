@@ -49,6 +49,23 @@ public class CLL {
 
     }
 
+    public void deleteLast() {
+        if (head == null) {
+            return;
+        }
+
+        if (head == tail) {
+            head = tail = null;
+        }
+        Node temp = head;
+        while (temp.next != tail) {
+            temp = temp.next;
+        }
+        temp.next = head;
+        tail = temp;
+
+    }
+
     public void display() {
         if (head == null) {
             System.out.println("List is empty");
@@ -70,6 +87,7 @@ public class CLL {
         list.addLast(40);
         list.addLast(50);
         list.deleteFirst();
+        list.deleteLast();
         list.display();
     }
 }
