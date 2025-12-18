@@ -92,6 +92,12 @@ class DLL {
             temp = temp.next;
         }
         System.out.println("END");
+
+        System.out.println("reverse a linked list");
+        while(tail != null) {
+            System.out.print(tail.value + " <-> ");
+            tail = tail.prev;
+        }
     }
 }
 
@@ -104,9 +110,9 @@ public class DLL1 {
         list.insertFirst(20);
         list.insertFirst(30);
         list.display();
-        list.insertLast(40);
-        list.display();
-        list.insertatIndex(25, 2);
-        list.display();
+        // list.insertLast(40);
+        // list.display();
+        // list.insertatIndex(25, 2);
+        // list.display();
     }
 }
