@@ -24,6 +24,18 @@ public class CLL {
         tail.next = head;
     }
 
+    public void addLast(int value) {
+        Node newnode = new Node(value);
+        if (head == null) {
+            head = tail = newnode;
+            tail.next = head;
+            return;
+        }
+        tail.next = newnode;
+        tail = newnode;
+        tail.next = head;
+    }
+
     public void display() {
         if (head == null) {
             System.out.println("List is empty");
@@ -42,6 +54,8 @@ public class CLL {
         list.addFirst(10);
         list.addFirst(20);
         list.addFirst(30);
+        list.addLast(40);
+        list.addLast(50);
         list.display();
     }
 }
