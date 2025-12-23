@@ -24,6 +24,15 @@ class Stack {
             return true;
         }
     }
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack Underflow");
+            return 0;
+        } else {
+            int x = a[top--];
+            return x;
+        }
+    }
 
 }
 
@@ -34,6 +43,8 @@ class Stack2 {
         s.push(10);
         s.push(20);
         s.push(30);
+        System.out.println(s.pop() + " Popped from stack");
+        
         
     }
 }
