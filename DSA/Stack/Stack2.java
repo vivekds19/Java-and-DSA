@@ -33,6 +33,15 @@ class Stack {
             return x;
         }
     }
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("Stack Underflow");
+            return 0;
+        } else {
+            int x = a[top];
+            return x;
+        }
+    }
 
 }
 
@@ -43,8 +52,10 @@ class Stack2 {
         s.push(10);
         s.push(20);
         s.push(30);
+        s.push(34);
         System.out.println(s.pop() + " Popped from stack");
-        
+        System.out.println("Top element is :" + s.peek());
+
         
     }
 }
