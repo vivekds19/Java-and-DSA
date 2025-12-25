@@ -26,6 +26,14 @@ class Node {
         preorder(node.right);
     }
 
+    void postorder(Node node)
+    {
+        if (node==null) return;
+
+        postorder(node.left);
+        postorder(node.right);
+        System.out.print(node.data + " ");
+    }
     public static void main(String[] args) {
         Traversal tree = new Traversal();
         tree.root = new Node(1);
@@ -41,6 +49,9 @@ class Node {
 
         System.out.println("\nPreorder Traversal:");
         tree.preorder(tree.root);
+
+        System.out.println("\nPostorder Traversal:");
+        tree.postorder(tree.root);
 }
 
 }
