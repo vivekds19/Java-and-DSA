@@ -18,6 +18,14 @@ class Node {
         inorder(node.right);
     }
 
+    void preorder(Node node)
+    {
+        if(node==null) return;
+        System.out.print(node.data + " ");
+        preorder(node.left);
+        preorder(node.right);
+    }
+
     public static void main(String[] args) {
         Traversal tree = new Traversal();
         tree.root = new Node(1);
@@ -27,7 +35,12 @@ class Node {
         tree.root.left.right=new Node(5);
         tree.root.right.left=new Node(6);
         tree.root.right.right=new Node(7);
+        
+        System.out.println("Inorder Traversal:");
+        tree.inorder(tree.root);
 
-        tree.inorder(tree.root); 
-    }
+        System.out.println("\nPreorder Traversal:");
+        tree.preorder(tree.root);
+}
+
 }
